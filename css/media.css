@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    color: #222328;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* pc */
+@media screen and (max-width:1199px){
+  html,body {
+    font-size:56.3%;
+  }
+  
+  header{
+    height: 83px;
+  }
+
+  header .inner{
+    align-items: center;
+    padding:0 20px ;
+  }
+  .visual{
+    height: 548px;
+  }
+  .visu_txt{
+    position:static;
+    top:auto;
+    left:auto;
+    align-items: center;
+    margin:auto;
+    text-align: center;
+  }
+
+  .dep03 .inner{
+    flex-direction: column;
+    align-items: center;
+  }
+  .dep03 .txt_wrap {
+    text-align: center;
+    margin-bottom:140px;
+  }
+
+  .dep03{
+    padding:130px 0;
+  }
+  .depth {
+    padding:100px 20px;
+  }
+  .dep1_list li{
+    width:calc(100% / 4 - 19.5px)
+  }
+  .dep1_list li .img_wrap{
+    height: 220px;
+  }
+  .dep02 .img_wrap, .dep04 .img_wrap{
+    width:430px;
+    height: 430px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width:899px){
+  header {
+    height: 57px;
+  }
+  h1 {
+    font-size:2.555rem
+  }
+  .navBtn {
+    display:block;
+    width:28px;
+    height: 22px;
+    position:relative;
+  }
+  .navBtn span{
+    position:absolute;
+    left:0;
+    width:100%;
+    height: 3px;
+    background-color: #000;
+    display:block;
+    transition:all .3s;
+  }
+  .navBtn span:nth-child(1){
+    top:0;
+  }
+  .navBtn span:nth-child(2){
+    top:calc(50% - 1.5px)
+  }
+  .navBtn span:nth-child(3){
+    top:19px;
+
+  }
+
+header.active   .navBtn span:nth-child(1){
+  top:calc(50% - 1.5px);
+  transform:rotate(45deg)
+}
+header.active   .navBtn span:nth-child(2){
+  transform:translateX(-100%);
+  opacity:0
+}
+
+header.active   .navBtn span:nth-child(3){
+  top:calc(50% - 1.5px);
+  transform:rotate(-45deg)
+}
+
+  header .nav{
+    position:fixed;
+    top:58px;
+    width:100vw;
+    z-index:5;
+    flex-direction: column;
+    height: calc(100% - 57px);
+    background-color: #eee;
+    /* right:0; */
+    right:-110%;
+    justify-content: center;
+    align-items: center;
+    transition:right .3s ease-in-out;
+    
+  }
+  header.active .nav{
+    right: 0;
+
+  }
+  header .nav li{
+    margin-left:0;
+    border-bottom:1px solid #ccc;
+    padding:0  30px;
+    margin-bottom:45px;
+  }
+  header .nav li a{
+    font-size:4rem;
+  }
+
+
+  /* visual */
+  .visual{
+    height: calc(100vh - 57px);
+  }
+  .visu_txt{
+    justify-content: flex-end;
+    padding-bottom:75px;
+  }
+  .dep01 .txt_wrap{
+    margin-bottom:50px;
+  }
+  .dep1_list{
+    flex-wrap:wrap;
+    max-width: 480px;
+    margin: auto;
+  }
+  .dep1_list li{
+    width:calc(50% - 10px);
+    height: auto;
+    margin-bottom:50px;
+  }
+  .dep01 .cont_txt{
+    margin-top:15px;
+  }
+
+  .dep02 .inner, .dep04 .inner{
+    flex-direction: column;
+  }
+  .dep02 .img_wrap, .dep04 .img_wrap{
+    width:80vw;
+    height: 80vw;
+    margin:auto
+  }
+  .dep02 .img_wrap .slider {
+    width:80vw;
+    height: 80vw;
+    margin:auto
+  }
+  .dep02 .txt_wrap, .dep04 .txt_wrap{
+    width:80vw;
+    margin:auto;
+  }
+  .dep02 .img_wrap{
+    order:1;
+    margin-top:45px;
+  }
+  .dep04 .img_wrap{
+    margin-top:45px;
+  }
+
+
+  .dep03 .txt_wrap{
+    margin-bottom:45px;
+  }
+
+  .depth3_list{
+    width:90vw;
+  }
+  .depth3_list li{
+    height: 400px;
+    padding:40px 20px 20px;
+  }
+
+  .dep5_list{
+    flex-direction: column;
+    align-items: center;
+    margin-top:45px;
+  }
+  .dep5_list li{
+    margin-bottom:45px;
+  }
+  footer{
+    padding:40px 0;
+  }
+ footer .nav {
+   display:none;
+ }
+ footer .inner{
+   justify-content: center;
+   text-align: center;
+ }
+}
+
+/* tablet */
+@media screen and (max-width:599px){
+  h2.tit_big{
+    font-size:5.2rem
+  }
+  p.sub_txt{
+    font-size:1.555rem;
+  }
+  .dep1_list li .img_wrap{
+    height: 40vw;
+  }
+  .depth{
+    padding:80px 15px;
+  }
+  .depth3_list {
+    justify-content: center;
+  }
+  .depth3_list li{
+    width:80vw;
+    height: auto;
+  }
+  .depth3_list li:nth-child(1){
+    margin-top:0;
+  }
+  .depth3_list li:nth-child(3){
+    margin-bottom:50px
+  }
+  .depth3_list li:nth-child(4){
+    margin-top:0;
+  }
+  .depth3_list li .img_wrap{
+  height: 50vw;
+  min-height: 200px;
+  margin-top:20px;
+  }
+}
+
+/* Start https://www.cursors-4u.com */ *{cursor: url(https://cur.cursors-4u.net/nature/nat-8/nat738.cur),auto !important;} /* End https://www.cursors-4u.com */
+
